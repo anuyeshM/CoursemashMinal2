@@ -2,19 +2,13 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import React from 'react'
 import Home from './components/Home/Home';
-
-
 import NotFound from './components/NotFound/NotFound';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Services from './components/Services/Services';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
-import Login from './components/Login/Login';
-import Register from './components/register/register';
-import Community from './components/Community/Community';
-
-
+import Account from './components/Account/Account';
 import SingleCourse from './components/SingleCourse/SingleCourse';
 import { createContext, useEffect, useState } from 'react';
 import ScaleLoader from "react-spinners/ScaleLoader";
@@ -37,7 +31,7 @@ function App() {
     },4000)
   },[])
  useEffect(()=>{
-   ReactGa.initialize('G-FVH15YVQ8H')
+   ReactGa.initialize('G-HS4E6H0Y4B')
    //to report pagew viewBox
    ReactGa.pageview(window.location.pathname + window.location.search)
    
@@ -91,25 +85,14 @@ function App() {
               <About></About>
             </Route>
             <Route exact path='/Profile'>
-              <Login></Login>
-            </Route>
-            <Route exact path='/login'>
-              <Login></Login>
-            </Route>
-            <Route exact path='/Register'>
-              <Register></Register>
+              <Account></Account>
             </Route>
             <Route exact path='/Contact'>
               <Contact></Contact>
             </Route>
-            <Route exact path='/Community'>
-              <Community></Community>
-            </Route>
             <Route exact path='/course/:id/:title'>
               <SingleCourse></SingleCourse>
             </Route>
-            
-          
 
             {/* 404 page */}
             <Route path="*">
