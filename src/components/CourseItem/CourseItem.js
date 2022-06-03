@@ -7,7 +7,7 @@ import StarRatings from 'react-star-ratings';
 
 const CourseItem = (props) => {
     //destrure props from course 
-    const { title, institute, rating, totalRate, lebel, price, imgUrl, pdf} = props.course;
+    const { title, institute, rating, totalRate, price, imgUrl, pdf} = props.course;
     const { handleDetails, course } = props;
    
     
